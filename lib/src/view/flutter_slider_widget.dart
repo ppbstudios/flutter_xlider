@@ -2259,6 +2259,8 @@ class _FlutterSliderState extends State<FlutterSlider>
   }
 
   void _renderBoxInitialization() {
+    if (!mounted) return;
+
     if (_containerLeft <= 0 ||
         ((MediaQuery.maybeSizeOf(context)?.width ?? 0) - _constraintMaxWidth) <=
             _containerLeft) {
